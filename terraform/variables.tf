@@ -4,33 +4,73 @@ variable "region" {
 variable "environment" {
   default = "Development"
 }
-variable "vpc_cidr" {
-  description = "VPC cidr block"
-}
-variable "public_subnet_1_cidr" {
-  description = "Public Subnet 1 cidr block"
-}
-variable "public_subnet_2_cidr" {
-  description = "Public Subnet 2 cidr block"
-}
-variable "public_subnet_3_cidr" {
-  description = "Public Subnet 3 cidr block"
-}
-variable "private_subnet_1_cidr" {
-  description = "Private Subnet 1 cidr block"
-}
-variable "private_subnet_2_cidr" {
-  description = "Private Subnet 2 cidr block"
-}
-variable "private_subnet_3_cidr" {
-  description = "Private Subnet 3 cidr block"
-}
-variable "instance_type" {
 
+variable "access_key" {
+  description = "AWS Access Key"
+  default     = "AKIA3NQACJY44ZEEKPX5"
 }
-variable "instance_ami" {
 
+variable "secret_key" {
+  description = "AWS Secret Key"
+  default     = "zNqGLogqyIkkQSDBFguHa+A+1UiwSxLdCCbpn//w"
 }
-variable "keyname" {
-  
+
+variable "region" {
+  description = "AWS Region "
+  default     = "us-east-1"
+}
+
+variable "ami_id" {
+  description = "AMI ID to be used for Instance "
+  default     = "ami-06911dc6907882149"
+}
+
+variable "instancetype" {
+  description = "Instance Typebe used for Instance "
+  default     = "t2.micro"
+}
+
+variable "subnetid" {
+  description = "Subnet ID to be used for Instance "
+  default     = "subnet-4a4f336b"
+}
+
+variable "AppName" {
+  description = "Application Name"
+  default     = "bastion-Host-test"
+}
+
+variable "AppName1" {
+  description = "Application Name"
+  default     = "bastion-Host-QA"
+}
+
+variable "Env" {
+  description = "Application Name"
+  default     = "Dev"
+}
+
+variable "Env1" {
+  description = "Application Name"
+  default     = "QA"
+}
+
+variable "HostIp" {
+  description = "Host Public IP to be allowed SSH for"
+  default     = "186.154.173.50/32"
+}
+
+variable "PvtIp" {
+  description = " Host IP to be allowed SSH for"
+  default     = "192.168.0.0/16"
+}
+
+variable "PvtIP" {
+  description = " Host IP to be allowed SSH for"
+  default     = "192.168.0.0/16"
+}
+
+variable "azs" {
+  description = " Avaliavity zones"
+  default = ["us-east-1b", "us-east-1c", "us-east-1d"]
 }
